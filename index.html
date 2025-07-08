@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧊 Rubik's Cube Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="header">
+    <h1 class="fade-in">Learn the Rubik's Cube</h1>
+    <nav>
+        <ul class="slide-in">
+            <li><a href="#" class="nav-link" onclick="showSection('introduction')">Introduction</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('steps')">Steps</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('videos')">Videos</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('notations')">Notations</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('timer')">Timer</a></li>
+
+        </ul>
+    </nav>
+  <div class="theme-switcher">
+    <span title="Change Theme" id="theme-icon" style="cursor:pointer;font-size:1.5em;">🎨</span>
+    <select id="theme-select" class="hidden" aria-label="Choose theme">
+        <option value="default">Default</option>
+        <option value="midnight">Midnight</option>
+        <option value="sunset">Sunset</option>
+        <option value="forest">Forest</option>
+        <option value="aqua">Aqua</option>
+        <option value="retro">Retro</option>
+    </select>
+</div>
+</header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction" class="content-section tab-content">
+            <h2>Introduction</h2>
+            <p>Welcome to the Rubik's Cube tutorial! Here, you will learn how to solve Rubik's Cube step by step.</p>
+            <br>
+            <p>I will take you over the guide on how to solve the rubiks cube step by step</p>
+            <p>Everything will be easy <strong>Inshallah</strong></p>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="content-section tab-content">
+            <h2>Steps</h2>
+            <p>Follow these steps to solve the Rubik's Cube.</p>
+            <br>
+            <p>1.Download And Memorize Notations</p>
+            <br>
+            <p>2.Memorize Left and Right Sexy Moves: R U R' U' and L' U' L U</p>
+            <br>
+            <p>3.Know how to solve the Daisy and then the white cross using the guide in the videos</p>
+            <br>
+            <p>4.Solve the first layer using the guide in the videos</p>
+            <br>
+            <p>5.Solve the second layer using the guide in the videos</p>
+            <br>
+            <p>6.Solve the yellow cross using the guide in the videos</p>
+            <br>
+            <p>7.Solve all Corners using the guide in the videos</p>
+            <br>
+            <p>Final Step: Solve the Edges using the guide in the videos!</p>
+            <br>
+            <p>I know it sounds confusing, But the videos are made to ease things and guide you through the Steps
+                <strong>Easily!</strong></p>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="content-section tab-content">
+            <h2>Videos</h2>
+            <div class="level-title">Level A1</div>
+            <div class="video-container">
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/zi4xt0w98Zo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/p9mVAZ8w2n4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/dPYgESOkCZs" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/tedzHkD5oQU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/vcYewgBcFR8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/yCuRZMcGONM?feature=share" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Extra Lessons Section Inside Videos -->
+            <section id="extra-lessons" class="content-section">
+                <h3>Extra Lessons</h3>
+                <p>Additional lessons to improve your Rubik's Cube skills:</p>
+
+                <div class="extra-lesson-video-container">
+                                <iframe width="320" height="180" src="https://www.youtube.com/embed/cPfLomr5Iv4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+        </section>
+
+        <!-- Notations Section -->
+        <section id="notations" class="content-section tab-content">
+            <h2>Notations</h2>
+            <p>Here are the notations for solving the Rubik's Cube:</p>
+            <img src="notations.png" alt="Rubik's Cube Notations" class="notation-image" title="Rubik's Cube Notations">
+            <div class="download-button">
+                <a href="notations.png" title="Download Notations" download><button class="download-btn">Download
+                        Notations Image</button></a>
+            </div>
+        </section>
+        <section id="timer" class="content-section tab-content">
+    <h2>Cube Timer</h2>
+    <div id="scramble" style="font-size:1.3em;margin-bottom:10px;"></div>
+    <div id="timer-display" style="font-size:2.5em;margin:20px 0;">0.00</div>
+    <button id="timer-btn" style="font-size:1.2em;padding:8px 20px;">Start</button>
+    <p style="margin-top:10px;font-size:0.95em;">Press <b>Space</b> to start/stop the timer</p>
+</section>
+
+        <footer class="footer">
+              <nav>
+                <ul class="slide-in"><li><p>&copy; 2025 <a href="about.html" class="nav-link">Yossof Alberto</a></p></li></ul>
+              </nav>
+            
+        </footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
