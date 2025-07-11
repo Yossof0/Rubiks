@@ -1,0 +1,487 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #3700b3;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Content Section Styles */
+.content-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6200ea;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Extra Lessons Section Styles */
+.extra-lesson-video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    
+}
+
+video {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Notations Section Styles */
+.notation-image {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    border: 2px solid #6200ea;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+    background-color: #3700b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #6200ea;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #3700b3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer a:hover {
+    color: #eee;
+        width: 100%;
+         left: 0;
+}
+
+.footer a {
+    color: lightgray;
+    text-decoration: none;
+}
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Video Level Title */
+.level-title {
+    font-size: 1.7em;
+    color: #6200ea;
+    margin-top: 40px;
+}
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .content-section {
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .level-title {
+        font-size: 1.1em;
+    }
+    .notation-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    video,
+    .extra-lesson-video-container video,
+    .video-container iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16/9;
+    }
+    .video-container,
+    .extra-lesson-video-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+.video-container iframe,
+.extra-lesson-video-container iframe {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#theme-select {
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* Default Theme (base) */
+body.theme-default {
+    --bg: #f0f8ff;
+    --header: #6200ea;
+    --nav: #3700b3;
+    --accent: #6200ea;
+    --text: #333;
+    --section-bg: #fff;
+}
+
+/* Midnight Theme */
+body.theme-midnight {
+    --bg: #181c2f;
+    --header: #232946;
+    --nav: #121629;
+    --accent: #eebbc3;
+    --text: #eaeaea;
+    --section-bg: #232946;
+}
+
+/* Sunset Theme */
+body.theme-sunset {
+    --bg: #fff4e6;
+    --header: #ff6f3c;
+    --nav: #ff9a3c;
+    --accent: #ff6f3c;
+    --text: #3d2c29;
+    --section-bg: #ffe0b2;
+}
+
+/* Forest Theme */
+body.theme-forest {
+    --bg: #e8f5e9;
+    --header: #388e3c;
+    --nav: #2e7d32;
+    --accent: #43a047;
+    --text: #1b5e20;
+    --section-bg: #c8e6c9;
+}
+
+/* Aqua Theme */
+body.theme-aqua {
+    --bg: #e0f7fa;
+    --header: #00bcd4;
+    --nav: #00838f;
+    --accent: #00acc1;
+    --text: #004d40;
+    --section-bg: #b2ebf2;
+}
+/* Matrix Theme */
+body.theme-matrix {
+    --bg: #0f2027;
+    --header: #1a3c1a;
+    --nav: #162c16;
+    --accent: #39ff14;
+    --text: #39ff14;
+    --section-bg: #162c16;
+}
+
+/* Pastel Theme */
+body.theme-pastel {
+    --bg: #fdf6fd;
+    --header: #b5ead7;
+    --nav: #ffdac1;
+    --accent: #ffb7b2;
+    --text: #444;
+    --section-bg: #c7ceea;
+}
+
+/* Lava Theme */
+body.theme-lava {
+    --bg: #2d0606;
+    --header: #ff4500;
+    --nav: #b22222;
+    --accent: #ff6347;
+    --text: #fff3e0;
+    --section-bg: #7c0a02;
+}
+
+/* Ice Theme */
+body.theme-ice {
+    --bg: #e0f7fa;
+    --header: #81d4fa;
+    --nav: #0288d1;
+    --accent: #00bcd4;
+    --text: #01579b;
+    --section-bg: #b3e5fc;
+}
+
+/* Galaxy Theme */
+body.theme-galaxy {
+    --bg: #1a0033;
+    --header: #3d0066;
+    --nav: #29004d;
+    --accent: #ffb347;
+    --text: #e0e0ff;
+    --section-bg: #3d0066;
+}
+
+/* Retro Theme */
+body.theme-retro {
+    --bg:rgb(250, 255, 183);
+    --header: #b2ff47;
+    --nav: #61edff;
+    --accent: #96abfd;
+    --text: #333;
+    --section-bg: #fde3f1;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+.header {
+    background-color: var(--header);
+    color: var(--text);
+}
+nav ul {
+    background-color: var(--nav);
+}
+.level-title,
+.content-section h2 {
+    color: var(--accent);
+}
+.content-section {
+    background: var(--section-bg);
+    border-radius: 10px;
+}
+.download-btn {
+    background-color: var(--nav);
+}
+.download-btn:hover {
+    background-color: var(--accent);
+}
+.footer {
+    background-color: var(--nav);
+    color: var(--text);
+}
+.notation-image {
+    border-color: var(--accent);
+}
+a, .nav-link {
+    color: var(--accent);
+}
+a:hover, .nav-link:hover {
+    color: var(--header);
+}
+.hidden {
+    display: none;
+}
+.theme-switcher select {
+    transition: opacity 0.2s;
+}
+.theme-switcher select.show {
+    display: inline-block;
+    opacity: 1;
+}
+@media (min-width: 700px) {
+    html, body {
+        height: 100%;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
+    .footer {
+        flex-shrink: 0;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav);
+        color: var(--text);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
+/* On small screens, footer is just static */
+@media (max-width: 699px) {
+    .footer {
+        position: static;
+    }
+}
+body {
+    transition: background-color 0.4s, color 0.4s;
+}
+.header, nav ul, .content-section, .footer {
+    transition: background-color 0.4s, color 0.4s;
+}
+.nav-link.active, nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+body::-webkit-scrollbar {
+    width: 8px;
+    background: var(--section-bg);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+.enlarge {
+    font-size: 1.2em;
+}
+.timer-stats {
+    background: var(--section-bg, #f9f9f9);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center;
+}
+.timer-stats h3 {
+    margin-top: 0;
+}
+.timer-stats button {
+    margin: 0 5px;
+    padding: 6px 14px;
+    border-radius: 5px;
+    border: none;
+    background: var(--accent, #39ff14);
+    color: #222;
+    cursor: pointer;
+    font-weight: bold;
+}
+.timer-stats button:hover {
+    background: var(--header, #232946);
+    color: #fff;
+}

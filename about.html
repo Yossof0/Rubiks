@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Yossof Abdelwahed</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Lazy YouTube thumbnail style */
+        .yt-thumb {
+            width: 320px;
+            height: 180px;
+            cursor: pointer;
+            background: #000;
+            position: relative;
+            display: inline-block;
+            margin: 8px 0;
+        }
+        .yt-thumb img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .yt-thumb span {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 2em;
+            color: #fff;
+            pointer-events: none;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        .project-list li {
+            margin-bottom: 18px;
+        }
+        .project-list a {
+            font-weight: bold;
+            color: var(--accent, #0078d7);
+            text-decoration: none;
+        }
+        .project-list a:hover {
+            text-decoration: underline;
+        }
+        .project-list div {
+            font-size: 0.98em;
+            color: var(--text, #444);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="fade-in">About Me</h1>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about-me" class="content-section">
+            <h2>Hello! I'm Yossof 👋</h2>
+            <p>
+                I'm a passionate developer and puzzle enthusiast who loves building interactive web experiences.
+                My journey with the Rubik's Cube started as a fun challenge, and it quickly grew into a passion for teaching others how to solve it.
+                I created this website to make learning the Rubik's Cube accessible, engaging, and enjoyable for everyone—whether you're a complete beginner or looking to improve your speed.
+            </p>
+            <p>
+                Beyond coding and cubing, I enjoy exploring new technologies, sharing knowledge, and working on creative projects that help others learn and grow.
+                Thank you for visiting my site—hope you find it helpful and inspiring!
+            </p>
+        </section>
+
+        <!-- Other Projects Section -->
+        <section id="other-projects" class="content-section">
+            <h2>Other Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <a href="https://yossof0.github.io/MT/" target="_blank" rel="noopener" class="enlarge">Multiplication Table App</a>
+                    <div>An app that lets you get the multiplication table for any number.</div>
+                </li>
+                <li>
+                    <a href="https://yossof0.github.io/Calculator/" target="_blank" class="enlarge">Calculator App</a>
+                    <div>A basic calculator for quick calculations.</div>
+                </li>
+                <li>
+                    <a href="https://yossof0.github.io/Word-Combination/" target="_blank" class="enlarge">Word Combination App</a>
+                    <div>Lets you get all possible combinations of a set of words.</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <ul class="slide-in">
+                <li>
+                    <p>&copy; 2025 <a href="index.html" class="nav-link">Yossof Alberto</a></p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+    // Lazy load YouTube videos
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.yt-thumb').forEach(div => {
+            div.addEventListener('click', function() {
+                const ytid = this.getAttribute('data-ytid');
+                this.outerHTML = `<iframe width="320" height="180" src="https://www.youtube.com/embed/${ytid}" frameborder="0" allowfullscreen></iframe>`;
+            });
+        });
+    });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
